@@ -1,5 +1,5 @@
 class ShoppingCart:
-    """Represents a shopping cart containing e-books and handling cart operations."""
+    """Represents a shopping cart containing e-books and handling cart operations."""    
     def __init__(self):
         self.items = []
 
@@ -11,7 +11,7 @@ class ShoppingCart:
             self.items.remove(ebook)
 
     def get_total_price(self):
-        return sum(item.price for item in self.items)
+        return sum(item.get_price() for item in self.items)  # Use the getter method
 
     def __str__(self):
         return f"ShoppingCart(items={[str(item) for item in self.items]})"

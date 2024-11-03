@@ -2,20 +2,20 @@ from shoppingcart import ShoppingCart  # Import ShoppingCart
 
 class Customer:
     """Represents a customer in the e-book store."""
-
+    
     def __init__(self, name, contact_info, loyalty_member=False):
-        self._name = name
+        self.name = name
         self._contact_info = contact_info
         self._loyalty_member = loyalty_member
-        self._shopping_cart = ShoppingCart()  # Initialize an empty shopping cart
+        self._shoppingcart = ShoppingCart()  # Initialize an empty shopping cart
 
     def get_name(self):
         """Returns the name of the customer."""
-        return self._name
+        return self.name
 
     def set_name(self, name):
         """Sets the name of the customer."""
-        self._name = name
+        self.name = name
 
     def get_contact_info(self):
         """Returns the contact information of the customer."""
@@ -35,7 +35,7 @@ class Customer:
 
     def get_shopping_cart(self):
         """Returns the customer's shopping cart."""
-        return self._shopping_cart
+        return self._shoppingcart
 
     def __str__(self):
-        return f"Customer(name={self._name}, contact_info={self._contact_info}, loyalty_member={self._loyalty_member})"
+        return f"Customer(name={self.name}, contact_info={self._contact_info}, loyalty_member={self._loyalty_member})"

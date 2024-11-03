@@ -21,7 +21,7 @@ class Main:
         return ebook
 
     def place_order(self, customer):
-        order = Order(customer, customer.shopping_cart)
+        order = Order(customer, customer.get_shopping_cart())
         invoice = Invoice(order)
         print(invoice.generate_invoice())
 
@@ -58,15 +58,16 @@ def test_ebook_store_system():
 
     # Add e-books to customer's shopping cart
     print("\nAdding e-books to shopping cart...")
-    customer1.shopping_cart.add_item(ebook1)
-    customer1.shopping_cart.add_item(ebook2)
-    customer1.shopping_cart.add_item(ebook3)
+    customer1.get_shopping_cart().add_item(ebook1)
+    customer1.get_shopping_cart().add_item(ebook2)
+    customer1.get_shopping_cart().add_item(ebook3)
+
 
     # Display the customer and cart
     print("\nCustomer Details:")
     print(customer1)
     print("\nShopping Cart:")
-    print(customer1.shopping_cart)
+    print(customer1.get_shopping_cart())
 
     # Place an order and generate an invoice
     print("\nPlacing an order and generating invoice:")
@@ -74,8 +75,9 @@ def test_ebook_store_system():
 
     # Test for bulk discount (5 or more items)
     print("\nAdding more items to cart for bulk discount test...")
-    customer1.shopping_cart.add_item(ebook4)
-    customer1.shopping_cart.add_item(ebook5)
+    customer1.get_shopping_cart().add_item(ebook4)
+    customer1.get_shopping_cart().add_item(ebook5)
+
 
     # Place another order and generate an invoice
     print("\nPlacing a bulk order and generating invoice with bulk discount:")

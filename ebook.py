@@ -1,12 +1,11 @@
 class EBook:
-    """Represents an e-book with title, author, publication date, genre, and price."""
-    
+    """Represents an e-book with title, author, publication date, genre, and price."""    
     def __init__(self, title, author, publication_date, genre, price):
         self._title = title
         self._author = author
         self._publication_date = publication_date
         self._genre = genre
-        self._price = price
+        self.price = price 
 
     def get_title(self):
         """Returns the title of the e-book."""
@@ -42,11 +41,11 @@ class EBook:
 
     def get_price(self):
         """Returns the price of the e-book."""
-        return self._price
+        return self.price
 
     def set_price(self, price):
         """Sets the price of the e-book."""
-        self._price = price
+        self.price = price
 
     def __str__(self):
-        return f"EBook(title={self._title}, author={self._author}, genre={self._genre}, price={self._price})"
+        return f"EBook(title={self._title}, author={self._author}, genre={self._genre}, price={self.price})"
