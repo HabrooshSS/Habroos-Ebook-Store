@@ -41,11 +41,11 @@ def test_ebook_store_system():
 
     # Add e-books to catalog
     print("Adding e-books to catalog...")
-    ebook1 = main.add_ebook_to_catalog("Python Basics", "John Doe", "2022", "Programming", 10.0)
-    ebook2 = main.add_ebook_to_catalog("Deep Learning", "Jane Doe", "2023", "AI", 15.0)
-    ebook3 = main.add_ebook_to_catalog("Data Science Essentials", "Alice Smith", "2021", "Data Science", 20.0)
-    ebook4 = main.add_ebook_to_catalog("Blockchain Basics", "Bob Lee", "2023", "Blockchain", 25.0)
-    ebook5 = main.add_ebook_to_catalog("Cybersecurity 101", "Charlie Kim", "2020", "Security", 30.0)
+    ebook1 = main.add_ebook_to_catalog("Python Basics", "Habroosh", "2022", "Programming", 10.0)
+    ebook2 = main.add_ebook_to_catalog("Deep Learning", "Saeed", "2023", "AI", 15.0)
+    ebook3 = main.add_ebook_to_catalog("Data Science Essentials", "Suwaidi", "2021", "Data Science", 20.0)
+    ebook4 = main.add_ebook_to_catalog("Blockchain Basics", "Jamal suwaidi", "2023", "Blockchain", 25.0)
+    ebook5 = main.add_ebook_to_catalog("Cybersecurity 101", "Mohammad jamal", "2020", "Security", 30.0)
 
     # Display catalog
     print("\nCatalog:")
@@ -53,8 +53,8 @@ def test_ebook_store_system():
 
     # Add a customer
     print("\nAdding a customer...")
-    customer1 = main.add_customer("Habroosh Al Suwaidi", "habroosh@gmail.com")
-    customer1.loyalty_member = True  # Making the customer a loyalty program member
+    customer1 = main.add_customer("Habroosh Al Suwaidi", "habroosh2002@gmail.com")
+    customer1.loyalty_member = True 
 
     # Add e-books to customer's shopping cart
     print("\nAdding e-books to shopping cart...")
